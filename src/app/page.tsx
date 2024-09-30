@@ -1,7 +1,11 @@
+import MarkdownEditor from './components/markdownEditor'
+
 export default function Home() {
   return (
     <div>
-      <h1>Next.js + TypeScript</h1>
+      <h1>Hello Word</h1>
+      <MarkdownEditor reinitializeOnPropsChange />
+      <div id="editorjs"></div>
     </div>
   )
 }
