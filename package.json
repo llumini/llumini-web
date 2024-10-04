@@ -11,12 +11,12 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@editorjs/editorjs": "^2.30.6",
-    "@editorjs/header": "^2.8.7",
     "@tailwindcss/typography": "^0.5.15",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "slate": "^0.103.0",
+    "slate-react": "^0.110.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
@@ -36,8 +36,7 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ]
   },
   "config": {

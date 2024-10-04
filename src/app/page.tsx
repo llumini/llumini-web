@@ -1,11 +1,10 @@
-import MarkdownEditor from './components/markdownEditor'
+import { RichEditor } from './components/Editor'
 
 export default function Home() {
   return (
     <div>
       <h1>Hello Word</h1>
-      <MarkdownEditor reinitializeOnPropsChange />
-      <div id="editorjs"></div>
+      <RichEditor />
     </div>
   )
 }
