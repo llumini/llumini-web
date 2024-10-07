@@ -1,10 +1,9 @@
-import { RichEditor } from './components/Editor'
+import { Tiptap } from './components/TipTap'
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello Word</h1>
-      <RichEditor />
+    <div className="h-full min-h-screen flex flex-col items-center py-4">
+      <Tiptap />
     </div>
   )
 }
