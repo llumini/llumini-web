@@ -49,7 +49,6 @@
       "eslint --fix"
     ]
   },
-  "type": "module",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
