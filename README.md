@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# POC para Salvamento e Renderização de Notas em Markdown
 
-## Getting Started
+O objetivo desta POC é verificar se a implementação de notas em Markdown pode ser integrada ao sistema de forma eficiente, tanto no armazenamento quanto na renderização. Também vamos avaliar se a renderização no front-end pode ser melhorada com a inclusão de componentes adicionais.
 
-First, run the development server:
+### Hipóteses:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Provavelmente, a nota deve ser criada no momento em que o usuário clicar em "Nova Nota", contendo o conteúdo vazio. A partir daí, a nota só pode ser editada e salva.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Desafios:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Como garantir que salvar a nota no banco de dados não seja uma operação custosa? Evitando chamadas desnecessárias ao banco de dados.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### To-Do:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Enviar os dados do markdown para o back-end e salvar no banco de dados.
+- [ ] Criar a página de visualização das notas.
+- [ ] Implementar a página de criação de notas.
+- [ ] Implementar a edição de notas.
