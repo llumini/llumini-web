@@ -3,12 +3,17 @@
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { Button } from '@/components/ui/button'
+import api from '@/app/services/axios'
 
 export const Tiptap = () => {
-  const handleSave = () => {
+  const handleSave = async () => {
     if (editor) {
-      const json = editor.getJSON()
-      console.log(json)
+      const json = editor.getJSON().content
+      const response = await api.post('/note', {
+        title: 'New note',
+        content: json,
+      })
+      console.log(response)
     }
   }
 
